@@ -1,0 +1,54 @@
+/* reset halaman web */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: #222;
+  color: white;
+}
+
+/* membuat ukuran layar */
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barTop {
+  width: 100%;
+  height: 5px;
+  background-color: lightblue;
+  position: fixed;
+  animation: progresHorizontal;
+  animation-timeline: scroll();
+  transform-origin: 0;
+}
+
+.barButtom {
+  width: 100%;
+  height: 5px;
+  background-color: lightblue;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  animation: progresHorizontal;
+  animation-timeline: scroll();
+  transform-origin: 100%;
+}
+
+@keyframes progresHorizontal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* tes */
